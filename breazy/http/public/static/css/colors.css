@@ -1,0 +1,43 @@
+.text-white{
+    color: #fff;
+}
+
+.text-black{
+    color: #000;
+}
+
+.text-grey{
+    color: #606060;
+}
+
+.grey-light{
+    background-color: #f2f2f2;
+}
+
+.grey-dark-1{
+    background-color: #404040;
+}
+
+.grey-dark-2{
+    background-color: #303030;
+}
+
+.grey-dark-3{
+    background-color: #252525;
+}
+
+.grey-dark-4{
+    background-color: #202020;
+}
+
+.grey-dark-5{
+    background-color: #181818;
+}
+
+.grey-dark-6{
+    background-color: #151515;
+}
+
+.grey-dark-7{
+    background-color: #101010;
+}

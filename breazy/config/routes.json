@@ -1,0 +1,6 @@
+{
+  "/" : "HomeController::index",
+  "/admin" : "AuthController::index",
+  "/admin/login" : "AuthController::auth",
+  "/apply_filters" : "HomeController::apply_filter"
+}
