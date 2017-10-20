@@ -16,8 +16,8 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <a href="#" class="btn-large waves-effect yellow darken-4 right">Edit</a>
-                <a href="/admin/delete_project?id=<?= $project->id; ?>" class="btn-large waves-effect red darken-4 right admin-delete-project-btn">Delete</a>
+                <a href="/admin_edit_project?id=<?= $project->id; ?>" class="btn-large waves-effect yellow darken-4 right">Edit</a>
+                <a href="/admin/projects/edit?id=<?= $project->id; ?>" class="btn-large waves-effect red darken-4 right admin-delete-project-btn">Delete</a>
             </div>
         </div>
         <br>

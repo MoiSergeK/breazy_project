@@ -14,11 +14,13 @@ class UnitOfWork
     public $project_tag;
     public $projects;
     public $tags;
+    public $logs;
 
     public function __construct()
     {
         $this->projects = new ProjectRepository();
         $this->project_tag = new ProjectTagRepository();
         $this->tags = new TagRepository();
+        $this->logs = new LogRepository();
     }
 }

@@ -1,10 +1,13 @@
 {
   "/" : "HomeController::index",
   "/my_projects" : "HomeController::myProjects",
+  "/logger" : "LoggerController:index",
 
   "/admin" : "AdminController::index",
   "/admin_projects" : "AdminController::projects",
   "/admin/add_project" : "AdminController::addProject",
+  "/admin/save_project" : "AdminController::saveProject",
+  "/admin_edit_project" : "AdminController::editProject",
   "/admin/delete_project" : "AdminController::deleteProject",
 
   "/login" : "AuthController::index",

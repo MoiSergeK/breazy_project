@@ -40,4 +40,16 @@ class AdminController extends Controller
         }
         self::redirect('/admin_projects');
     }
+
+    public function editProject(){
+        $id = $_GET['id'];
+        $project = $this->_unitOfWork->projects->find($id);
+        $tags = $this->_unitOfWork->tags->getAll();
+        return $this->view('/admin/edit_project',
+            ['title' => 'Редактирование объекта', 'project' => $project, 'tags' => $tags]);
+    }
+
+    public function saveProject(){
+        self::redirect('/admin_projects');
+    }
 }
