@@ -9,11 +9,16 @@
 namespace App\Http\Repositories;
 
 
+use App\Core\Common\DB\DB;
 use App\Http\Models\Log;
 
 class LogRepository
 {
     public function getAll() : array {
-        return Log::sql("select * from logs");
+        return Log::sql("select * from logs;");
+    }
+
+    public function add($msg) {
+        DB::sql("insert into logs values(null, '$msg', null);");
     }
 }

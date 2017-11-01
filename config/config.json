@@ -21,5 +21,9 @@
       "video": "video",
       "audio": "audio"
     }
+  },
+
+  "log": {
+    "local": "../../log.txt"
   }
 }

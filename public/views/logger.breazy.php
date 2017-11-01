@@ -6,15 +6,25 @@
 
 </head>
 <body class="grey-dark-5 text-white">
-<header>
-    <h1><?= $this->title ?></h1>
+<header class="hr-bottom hr-dark">
+    <h5><?= $this->title ?></h5>
 </header>
 <main>
     <div class="content-box">
-        <?php foreach($this->logs as $log):?>
-            <?= $log->message; ?>
-            <br>
-        <?php endforeach ?>
+        <table>
+            <thead>
+                <th>MESSAGE</th>
+                <th>DATE</th>
+            </thead>
+            <tbody>
+                <?php foreach($this->logs as $log):?>
+                    <tr>
+                        <td><?= $log->msg; ?></td>
+                        <td><?= $log->date; ?></td>
+                    </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
     </div>
 </main>
 </body>
