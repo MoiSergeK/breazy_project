@@ -4,9 +4,9 @@
             <h4><?= $this->header ?></h4>
         </div>
         <div class="col s6 right-align">
-            <a href="/"><button class="breazy-btn <?= $this->title === 'Home' ? 'breazy-btn-active' : ''; ?>">
+            <a href="/projects/commercial"><button class="breazy-btn <?= $this->title === 'Home' ? 'breazy-btn-active' : ''; ?>">
                     Commercial projects</button></a>
-            <a href="/my_projects"><button class="breazy-btn <?= $this->title === 'My Projects' ? 'breazy-btn-active' : ''; ?>">
+            <a href="/projects/my"><button class="breazy-btn <?= $this->title === 'My Projects' ? 'breazy-btn-active' : ''; ?>">
                     My projects</button></a>
             <button class="breazy-btn">Mail Me</button>
         </div>

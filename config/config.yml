@@ -1,0 +1,20 @@
+db:
+  default:
+    mysql: "u348009671_projs"
+  databases:
+    mysql:
+      host: "localhost"
+      port: "3308"
+      username: "root"
+      password: "1234"
+      database: "u348009671_projs"
+files:
+  dirs:
+    root: "public/files"
+    img: "img"
+    video: "video"
+    audio: "audio"
+log:
+  local: "app/log.txt"
+  db:
+    mysql: "App\\Http\\Model\\Log"

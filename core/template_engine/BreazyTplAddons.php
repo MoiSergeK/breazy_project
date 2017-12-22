@@ -12,16 +12,16 @@ trait BreazyTplAddons
                 $asset_params .= "$key=\"$value\" ";
             }
         }
-        echo "<img src=\"public/files/img/$asset\" $asset_params>";
+        echo "<img src=\"/public/files/img/$asset\" $asset_params>";
     }
 
     public function style(){
         foreach (func_get_args() as $asset)
-            echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"public/assets/css/$asset.css\">\n";
+            echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/public/assets/css/$asset.css\">\n";
     }
 
     public function script(){
         foreach (func_get_args() as $asset)
-            echo "<script src=\"public/assets/js/$asset.js\"></script>\n";
+            echo "<script src=\"/public/assets/js/$asset.js\"></script>\n";
     }
 }

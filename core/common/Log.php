@@ -9,16 +9,19 @@
 namespace App\Core\Common;
 
 
-class Logger
+class Log
 {
     public static function push($msg){
         self::pushToLocalFile($msg);
     }
 
     public static function pushToLocalFile($msg){
-        $path = (new ConfigManager())->log['local'];
-        $date = date('Y:m:d:H:m:s');
-        file_put_contents($path, $date . " : " . $msg . "\n");
+        $path = (new ConfigManager())->log()['local'];
+        echo $path;
+        $date = date('Y/m/d H:m:s');
+        $f = fopen($path, 'a');
+        fwrite($f, $date . " : " . $msg . "\n");
+        fclose($f);
     }
 
     public static function pushToDb($msg){

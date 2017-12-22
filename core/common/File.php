@@ -40,10 +40,10 @@ class File
     }
 
     public static function getConfig($to_array = false){
-        return json_decode(file_get_contents(Path::getConfigPath()), $to_array);
+        return yaml_parse_file(Path::getConfigPath());
     }
 
     public static function getRoutes($to_array = false){
-        return json_decode(file_get_contents(Path::getRoutesPath()), $to_array);
+        return yaml_parse_file(Path::getRoutesPath());
     }
 }

@@ -2,38 +2,40 @@
 
 namespace App\Core\Common;
 
+require_once "config/routes.php";
+
 final class Router
 {
+    use Request;
+
     private $CURRENT_URL;
-    private $ERROR_404 = "404";
+    private $ERROR_404 = "/404";
 
     public function getPage() : string {
         $this->CURRENT_URL = $_SERVER['REQUEST_URI'];
-        $routes = $this->getRoutes();
-        $action = $this->_getRouteAction($routes);
-        if($action !== $this->ERROR_404){
-            $action = explode("::", $this->_getRouteAction($routes));
-            $class_name = Path::getControllerNamespace($action[0]);
-            $classInstance = new $class_name();
-            $method = $action[1];
-            return $classInstance->$method();
+
+        $route = $this->_getRoute();
+
+        if(!$route){
+            Request::redirect($this->ERROR_404);
         }
         else{
-            die();
-        }
-    }
+            $route = new RouteModel($route);
 
-    private function getRoutes() : array{
-        $data = File::getRoutes(true);
-        return $data;
-    }
-
-    private function _getRouteAction(&$routes) : string {
-        foreach($routes as $route => $action){
-            if($route === explode('?', $this->CURRENT_URL)[0]){
-                return $action;
+            if($route->needRedirect){
+                Request::redirect($route->url);
+            }
+            else{
+                $class_name = Path::getControllerNamespace(ucwords($route->class_name) . "Controller");
+                $controller = new $class_name();
+                $action = $route->action_name;
+                return $controller->$action();
             }
         }
-        return $this->ERROR_404;
+    }
+
+    private function _getRoute(){
+        $url = explode('?', $this->CURRENT_URL)[0];
+        return Route::getRoute($url);
     }
 }

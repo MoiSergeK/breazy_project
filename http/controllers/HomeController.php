@@ -54,4 +54,8 @@ class HomeController extends Controller
         $project->tags = $project_tags;
         return json_encode($project);
     }
+
+    public function _404(){
+        return '404';
+    }
 }

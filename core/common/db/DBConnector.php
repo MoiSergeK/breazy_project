@@ -18,10 +18,10 @@ class DBConnector
 
     public function setDefaultConnection(){
         $configManager = new ConfigManager();
-        $default = array_map(function($item){
-            return trim($item);
-        }, explode(':', $configManager->db()['default']));
-        $this->use($default[0], $default[1]);
+        foreach($configManager->db()['default'] as $key => $value){
+            $this->use($key, $value);
+            return;
+        }
     }
 
     public function use($dbms, $db){

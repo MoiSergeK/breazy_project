@@ -56,10 +56,10 @@ class Path
     }
 
     public static function getConfigPath(){
-        return self::$PROJECT_PATH . '/config/config.json';
+        return self::$PROJECT_PATH . '/config/config.yml';
     }
 
     public static function getRoutesPath(){
-        return self::$PROJECT_PATH . '/config/routes.json';
+        return self::$PROJECT_PATH . '/config/routes.yml';
     }
 }

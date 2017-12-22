@@ -1,9 +1,9 @@
+#!/usr/bin/env php
 <?php
 
 use App\Core\CodeMaking\CodeMaker;
 
 require_once('core/code_making/CodeMaker.php');
-require_once('core/code_making/CodeObserver.php');
 
 function main($argv){
     switch($argv[1]){

@@ -6,7 +6,7 @@ class LoggerController extends Controller
 {
     public function index(){
         $logs = $this->_unitOfWork->logs->getAll();
-        return $this->view('logger', ['logs' => $logs, 'title' => 'Logger']);
+        return $this->view('logger', ['logs' => $logs, 'title' => 'Log']);
     }
 
     public function addLog(){

@@ -10,9 +10,9 @@ class DBConnectionBuilder
 {
     public static function getPDO($dbms, $db){
         $configManager = new ConfigManager();
-        $db_settings = array_filter($configManager->db()['databases'][$dbms], function($item) use($db){
+        $db_settings = array_filter($configManager->db()['databases'], function($item) use($db){
             return $item['database'] == $db;
-        })[0];
+        })[$dbms];
 
         $host = $db_settings['host'];
         $port = $db_settings['port'];

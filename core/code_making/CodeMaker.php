@@ -2,6 +2,8 @@
 namespace App\Core\CodeMaking;
 
 
+use App\Core\Common\Path;
+
 class CodeMaker
 {
     private static function cut($args, $shift = 1){
@@ -69,9 +71,9 @@ class CodeMaker
     }
 
     public static function makeRoute($args){
-        $config = json_decode(file_get_contents('config/routes.json'),true);
-        $config[$args[0]] = ucfirst($args[1]) . 'Controller::' . $args[2];
-        file_put_contents('config/routes.json', json_encode($config));
+        $routes = yaml_parse_file(Path::getRoutesPath());
+        $routes[$args[0]] = ucfirst($args[1]) . 'Controller::' . $args[2];
+        file_put_contents('config/routes.yml', $routes);
     }
 
     public static function makeMigration()
