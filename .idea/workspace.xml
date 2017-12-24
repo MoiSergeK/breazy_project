@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7fd4a6f-b652-482f-a7be-b96833d70749" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/Route.php" afterPath="$PROJECT_DIR$/core/common/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/Router.php" afterPath="$PROJECT_DIR$/core/common/Router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/controllers/LoggerController.php" afterPath="$PROJECT_DIR$/http/controllers/LoggerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/_modals/mail.php" afterPath="$PROJECT_DIR$/public/views/_modals/mail.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="323">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mail.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/views/_modals/mail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -78,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getControllerPa</find>
       <find>_getPublicPath</find>
       <find>SysPathsHolder</find>
       <find>$tpldir</find>
@@ -107,6 +115,7 @@
       <find>hr-d</find>
       <find>contentBoxCloseBtn</find>
       <find>tags</find>
+      <find>addMail</find>
       <find>admin/mails/delete</find>
     </findStrings>
     <dirStrings>
@@ -155,7 +164,6 @@
         <option value="$PROJECT_DIR$/public/assets/js/Modal.js" />
         <option value="$PROJECT_DIR$/public/assets/js/MailModal.js" />
         <option value="$PROJECT_DIR$/public/views/layouts/app.breazy.php" />
-        <option value="$PROJECT_DIR$/public/views/_modals/mail.php" />
         <option value="$PROJECT_DIR$/http/repositories/UnitOfWork.php" />
         <option value="$PROJECT_DIR$/http/controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/public/views/admin/admin.breazy.php" />
@@ -171,6 +179,7 @@
         <option value="$PROJECT_DIR$/core/common/Router.php" />
         <option value="$PROJECT_DIR$/core/common/Route.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/public/views/_modals/mail.php" />
       </list>
     </option>
   </component>
@@ -221,34 +230,20 @@
             <path>
               <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
               <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
               <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="files" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="files" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -402,18 +397,17 @@
       <workItem from="1509734632368" duration="2476000" />
       <workItem from="1509896413396" duration="5119000" />
       <workItem from="1513958559292" duration="20151000" />
-      <workItem from="1514108446495" duration="22965000" />
+      <workItem from="1514108446495" duration="23895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273548000" />
+    <option name="totallyTimeSpent" value="274478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21529563" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21529563" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -682,14 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/_modals/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/admin/admin.breazy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -810,7 +796,7 @@
         <state relative-caret-position="272">
           <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding>
-            <element signature="e#128#154#0#PHP" expanded="true" />
+            <element signature="e#128#154#0#PHP" expanded="false" />
             <marker date="1514145642119" expanded="true" signature="270:289" ph="select * fro... mails" />
             <marker date="1514145642119" expanded="true" signature="368:428" ph="insert into mails... " />
             <marker date="1514145642119" expanded="true" signature="490:522" ph="delete from " />
@@ -861,8 +847,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="323">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/_modals/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding />
         </state>
       </provider>
