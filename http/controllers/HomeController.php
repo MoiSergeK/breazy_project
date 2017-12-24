@@ -55,7 +55,15 @@ class HomeController extends Controller
         return json_encode($project);
     }
 
+    public function addMail(){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $this->_unitOfWork->mails->add($name, $email, $message);
+        self::redirect('/');
+    }
+
     public function _404(){
-        return '404';
+        return $this->view('404');
     }
 }

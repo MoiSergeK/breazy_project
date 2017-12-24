@@ -53,7 +53,7 @@ class Route
     */
 
     public static function auth(){
-        return false;
+        return true;
     }
 
     public static function getRoute($url){

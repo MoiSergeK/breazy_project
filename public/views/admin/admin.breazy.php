@@ -2,14 +2,14 @@
 
 <div class="container">
     <form method="post" action="/admin/add_project" name="add_project_form" enctype="multipart/form-data">
-        <input id="addProjectFormTitle" placeholder="Название проекта" name="name">
+        <input id="addProjectFormTitle" placeholder="Project name" name="name">
         <select name="type">
-            <option disabled selected>Тип проекта</option>
+            <option disabled selected>Project type</option>
             <option value="commercial">Commercial</option>
             <option value="own">Own</option>
         </select>
         <br>
-        Тэги:
+        Tags:
         <br><br>
         <? foreach ($this->tags as $tag) : ?>
             <span class="bottom-block">
@@ -24,10 +24,10 @@
                 <input type="file" name="file" multiple>
             </div>
             <div class="file-path-wrapper">
-                <input class="file-path validate" placeholder="Прикрепите фото">
+                <input class="file-path validate" placeholder="Pin photo">
             </div>
         </div>
-        <textarea class="materialize-textarea" data-length="120" name="description"></textarea>
-        <input type="submit" value="Добавить проект!" class="breazy-btn right">
+        <textarea class="materialize-textarea" data-length="120" name="description" placeholder="Description..."></textarea>
+        <input type="submit" value="OK" class="breazy-btn right">
     </form>
 </div>

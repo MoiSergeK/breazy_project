@@ -15,6 +15,7 @@ class UnitOfWork
     public $projects;
     public $tags;
     public $logs;
+    public $mails;
 
     public function __construct()
     {
@@ -22,5 +23,6 @@ class UnitOfWork
         $this->project_tag = new ProjectTagRepository();
         $this->tags = new TagRepository();
         $this->logs = new LogRepository();
+        $this->mails = new MailRepository();
     }
 }

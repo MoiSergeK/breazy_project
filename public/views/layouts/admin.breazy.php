@@ -2,7 +2,7 @@
 <head>
     <title>Админская | <?= $this->title ?></title>
     <?= $this->style('materialize.min', 'colors', 'style') ?>
-    <?= $this->script('jquery-3.1.1.min', 'materialize.min', 'init') ?>
+    <?= $this->script('jquery-3.1.1.min', 'materialize.min', 'app') ?>
 </head>
 <body class="grey-dark-5 text-white">
 <header>

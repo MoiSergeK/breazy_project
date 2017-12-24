@@ -10,7 +10,7 @@ db:
       database: "u348009671_projs"
 files:
   dirs:
-    root: "public/files"
+    root: "/public/files"
     img: "img"
     video: "video"
     audio: "audio"

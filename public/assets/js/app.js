@@ -1,10 +1,13 @@
-var filters = []
+var filters = [];
+var cardInfoModal;
+var mailModal;
 
 $(document).ready(function(){
     let h = parseInt($('body').css('height')) - ( parseInt($('footer').css('height')) +
         parseInt($('header').css('height')) ) + 'px';
 
     initMaterializeComponents();
+    initObjects();
     setEvents();
 });
 
@@ -12,12 +15,22 @@ function initMaterializeComponents(){
     $('select').material_select();
 }
 
+function initObjects(){
+    try{
+        cardInfoModal = new CardInfoModal();
+        mailModal = new MailModal();
+    }
+    catch (e){}
+}
+
 function setEvents(){
     applyFilterEvent();
 
     cardClickEvent();
 
-    contentCloseBtnEvent();
+    $('#openMailModalBtn').on('click', function(){
+        mailModal.open();
+    });
 }
 
 function applyFilterEvent(){
@@ -38,7 +51,7 @@ function applyFilterEvent(){
                 for(let project of data){
                     content += "<div class=\"col l4 m12 s12\">\n" +
                         "                        <div class=\"card blue-grey darken-4 white-text\" id=\"" + project['id'] + "\">\n" +
-                        "                            <img src='public/files/img/" + project['logo'] + "' class=\"full-width\">\n" +
+                        "                            <img src='/public/files/img/" + project['logo'] + "' class=\"full-width\">\n" +
                         "                            <div class=\"content-box right-align\">\n" +
                         "                                " + project['name'] + "\n" +
                         "                            </div>\n" +
@@ -56,33 +69,9 @@ function applyFilterEvent(){
 
 function cardClickEvent() {
     $('.card').on('click', function(){
-        openContentBoxModal($(this).attr('id'));
+        $.post('/get_card_info', {id: $(this).attr('id')}, function(response){
+            cardInfoModal.setParams(response);
+            cardInfoModal.open();
+        });
     });
-}
-
-function contentCloseBtnEvent(){
-    $('#contentBoxCloseBtn').on('click', function(){
-        closeContentBoxModal();
-    });
-}
-
-function openContentBoxModal(id){
-    $.post('/get_card_info', {id: id}, function(response){
-        let data = JSON.parse(response);
-        $('#contentBoxModalTitle').text(data['name']);
-        $('#contentBoxModalDescription').text(data['description']);
-        $('#contentBoxModalImg').attr('src', data['logo']);
-        let tags = '';
-        for(let tag of data['tags']){
-            tags += "<i class='text-blue'><u>" + tag['name'] + "</u></i> ";
-        }
-        $('#contentBoxModalTags').html(tags);
-        $('body').css('overflow', 'hidden');
-        $('#contentBoxModal').fadeIn('fast');
-    });
-}
-
-function closeContentBoxModal(){
-    $('body').css('overflow', 'auto');
-    $('#contentBoxModal').fadeOut('fast');
 }

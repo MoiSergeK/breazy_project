@@ -8,7 +8,7 @@
                     Commercial projects</button></a>
             <a href="/projects/my"><button class="breazy-btn <?= $this->title === 'My Projects' ? 'breazy-btn-active' : ''; ?>">
                     My projects</button></a>
-            <button class="breazy-btn">Mail Me</button>
+            <button class="breazy-btn" id="openMailModalBtn">Mail Me</button>
         </div>
     </div>
 </div>

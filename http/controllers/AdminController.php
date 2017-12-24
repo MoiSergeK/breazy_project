@@ -10,17 +10,16 @@ class AdminController extends Controller
     public function __construct()
     {
         parent::__construct();
-        Auth::check();
     }
 
     public function index(){
         $tags = $this->_unitOfWork->tags->getAll();
-        return $this->view('/admin/admin', ['title' => 'Главная', 'tags' => $tags]);
+        return $this->view('/admin/admin', ['title' => 'Main', 'tags' => $tags]);
     }
 
     public function projects(){
         $projects = $this->_unitOfWork->projects->getAll();
-        return $this->view('/admin/admin_projects_list', ['title' => 'Все проекты', 'projects' => $projects]);
+        return $this->view('/admin/admin_projects_list', ['title' => 'All projects', 'projects' => $projects]);
     }
 
     public function addProject(){
@@ -46,10 +45,25 @@ class AdminController extends Controller
         $project = $this->_unitOfWork->projects->find($id);
         $tags = $this->_unitOfWork->tags->getAll();
         return $this->view('/admin/edit_project',
-            ['title' => 'Редактирование объекта', 'project' => $project, 'tags' => $tags]);
+            ['title' => 'Edit object', 'project' => $project, 'tags' => $tags]);
     }
 
     public function saveProject(){
         self::redirect('/admin_projects');
+    }
+
+    public function tags(){
+        return 'Tags';
+    }
+
+    public function mails(){
+        $mails = $this->_unitOfWork->mails->getAll();
+        return $this->view('/admin/mails', ['title' =>  'Mails', 'mails' => $mails]);
+    }
+
+    public function deleteMail(){
+        $id = $_GET['id'];
+        $this->_unitOfWork->mails->delete($id);
+        self::redirect('/admin/mails');
     }
 }

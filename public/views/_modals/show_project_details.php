@@ -1,5 +1,5 @@
 <div id="contentBoxModal">
-    <button id="contentBoxCloseBtn"><b>x</b></button>
+    <button id="contentBoxCloseBtn" class="roundedCloseBtn"><b>x</b></button>
     <div class="row">
         <div class="col s4">
             <img id="contentBoxModalImg" class="full-width">
