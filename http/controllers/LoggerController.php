@@ -9,8 +9,8 @@ class LoggerController extends Controller
         return $this->view('logger', ['logs' => $logs, 'title' => 'Log']);
     }
 
-    public function addLog(){
+    public function addMessage(){
         $this->_unitOfWork->logs->add($_GET['msg']);
-        return 'ok';
+        self::redirect('/logger');
     }
 }

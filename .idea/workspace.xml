@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7fd4a6f-b652-482f-a7be-b96833d70749" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/common/Curl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/http/models/Mail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/http/repositories/MailRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/CardInfoModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/MailModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/Modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/404.breazy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/_modals/mail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/admin/mails.breazy.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/js/init.js" afterPath="$PROJECT_DIR$/public/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.yml" afterPath="$PROJECT_DIR$/config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/Route.php" afterPath="$PROJECT_DIR$/core/common/Route.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/Router.php" afterPath="$PROJECT_DIR$/core/common/Router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/controllers/AdminController.php" afterPath="$PROJECT_DIR$/http/controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/controllers/HomeController.php" afterPath="$PROJECT_DIR$/http/controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/repositories/UnitOfWork.php" afterPath="$PROJECT_DIR$/http/repositories/UnitOfWork.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/colors.css" afterPath="$PROJECT_DIR$/public/assets/css/colors.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/style.css" afterPath="$PROJECT_DIR$/public/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/_common/admin_header.php" afterPath="$PROJECT_DIR$/public/views/_common/admin_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/_common/user_header.php" afterPath="$PROJECT_DIR$/public/views/_common/user_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/_modals/show_project_details.php" afterPath="$PROJECT_DIR$/public/views/_modals/show_project_details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/admin/admin.breazy.php" afterPath="$PROJECT_DIR$/public/views/admin/admin.breazy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/layouts/admin.breazy.php" afterPath="$PROJECT_DIR$/public/views/layouts/admin.breazy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/layouts/app.breazy.php" afterPath="$PROJECT_DIR$/public/views/layouts/app.breazy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/controllers/LoggerController.php" afterPath="$PROJECT_DIR$/http/controllers/LoggerController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="48" column="83" lean-forward="false" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+            <state relative-caret-position="198">
+              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/http/controllers/LoggerController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -58,28 +46,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mails.breazy.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/views/admin/mails.breazy.php">
+      <file leaf-file-name="Router.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/common/Router.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="363">
+              <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/repositories/MailRepository.php">
+      <file leaf-file-name="Route.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/common/Route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-              <folding>
-                <element signature="e#128#154#0#PHP" expanded="true" />
-                <marker date="1514145642119" expanded="true" signature="270:289" ph="select * fro... mails" />
-                <marker date="1514145642119" expanded="true" signature="368:428" ph="insert into mails... " />
-                <marker date="1514145642119" expanded="true" signature="490:522" ph="delete from " />
-                <marker date="1514145642119" expanded="true" signature="496:522" ph="insert into mails... " />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/http/repositories/LogRepository.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/http/models/Human.php" />
         <option value="$PROJECT_DIR$/maker.php" />
@@ -177,18 +158,19 @@
         <option value="$PROJECT_DIR$/public/views/_modals/mail.php" />
         <option value="$PROJECT_DIR$/http/repositories/UnitOfWork.php" />
         <option value="$PROJECT_DIR$/http/controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/core/common/Route.php" />
         <option value="$PROJECT_DIR$/public/views/admin/admin.breazy.php" />
         <option value="$PROJECT_DIR$/public/views/_common/admin_header.php" />
         <option value="$PROJECT_DIR$/public/views/_modals/show_project_details.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
         <option value="$PROJECT_DIR$/http/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/public/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/http/models/Mail.php" />
-        <option value="$PROJECT_DIR$/core/common/Router.php" />
         <option value="$PROJECT_DIR$/http/repositories/MailRepository.php" />
         <option value="$PROJECT_DIR$/public/views/admin/mails.breazy.php" />
+        <option value="$PROJECT_DIR$/http/controllers/LoggerController.php" />
+        <option value="$PROJECT_DIR$/core/common/Router.php" />
+        <option value="$PROJECT_DIR$/core/common/Route.php" />
+        <option value="$PROJECT_DIR$/config/routes.php" />
       </list>
     </option>
   </component>
@@ -261,7 +243,7 @@
               <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
               <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="repositories" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
@@ -420,12 +402,12 @@
       <workItem from="1509734632368" duration="2476000" />
       <workItem from="1509896413396" duration="5119000" />
       <workItem from="1513958559292" duration="20151000" />
-      <workItem from="1514108446495" duration="22249000" />
+      <workItem from="1514108446495" duration="22965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272832000" />
+    <option name="totallyTimeSpent" value="273548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -600,14 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/controllers/LoggerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/common/ConfigManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -716,14 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/common/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="69" column="51" lean-forward="false" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/admin/admin.breazy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -790,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="48" column="83" lean-forward="false" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -830,14 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/repositories/ProjectRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357">
@@ -852,14 +802,6 @@
             <marker date="1505594367963" expanded="true" signature="1234:1264" ph="delete from " />
             <marker date="1505594367963" expanded="true" signature="1401:1442" ph="select * fro... projects" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/common/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,6 +823,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/controllers/LoggerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/common/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/common/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>

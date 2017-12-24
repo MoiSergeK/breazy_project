@@ -28,6 +28,10 @@ Route::GET("/get_card_info")->handleBy("home", "getCardInfo");
 
 Route::POST("/addmail")->handleBy("home", "addMail");
 
+Route::GET("/logger")->handleBy("logger", "index");
+
+Route::GET("/logger/add")->handleBy("logger", "addMessage");
+
 /*
  * ---------------------------------------------------<< ADMIN >>-------------------------------------------------------
  */

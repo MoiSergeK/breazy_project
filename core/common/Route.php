@@ -56,10 +56,10 @@ class Route
         return true;
     }
 
-    public static function getRoute($url){
+    public static function getRoute($url, $method){
         foreach(self::$_routes as $key => $value){
             foreach($value as $id => $r){
-                if($r['url'] === $url){
+                if($method === $key && $r['url'] === $url){
                     return ['method' => $key, 'data' => $r];
                 }
             }
