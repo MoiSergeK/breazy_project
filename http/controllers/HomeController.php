@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Core\Common\DB\DB;
+use App\Core\Common\Log;
 use App\Core\Common\Path;
 
 class HomeController extends Controller

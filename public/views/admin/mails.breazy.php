@@ -26,7 +26,7 @@
                     <span class="text-blue"><?= $mail->message; ?></span>
                 </div>
             </div>
-            <center><a href="/admin/mails/delete/?id=<?= $mail->id ?>"><button class="breazy-btn roundedCloseBtn"><b>x</b></button></a></center>
+            <center><a href="/admin/mails/delete/?id=<?= $mail->id ?>" data-method="delete"><button class="breazy-btn roundedCloseBtn"><b>x</b></button></a></center>
         </div>
         <br>
     <?php endforeach; ?>
