@@ -63,7 +63,7 @@ class Route
         return false;
     }
 
-    public function handleBy($controller, $method){
+    public function load($controller, $method){
         if($this->_canPerform){
             foreach(self::$_routes as $key => &$value){
                 foreach($value as $id => &$r){
@@ -76,7 +76,7 @@ class Route
         return $this;
     }
 
-    public function redirectTo($url){
+    public function go($url){
         if($this->_canPerform){
             foreach(self::$_routes as &$route){
                 foreach($route as &$r){

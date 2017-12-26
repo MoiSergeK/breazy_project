@@ -8,32 +8,32 @@ use App\Core\Common\Routing\Route;
  * --------------------------------------------------<< COMMON >>-------------------------------------------------------
  */
 
-Route::GET("/404")->handleBy("home", "_404");
+Route::GET("/404")->load("home", "_404");
 
-Route::GET("/")->redirectTo("/projects/commercial");
-Route::GET("/projects/commercial")->handleBy("home", "index");
-Route::GET("/projects/my")->handleBy("home", "myProjects");
-Route::GET("/login")->handleBy("auth", "index");
-Route::GET("/try_login")->handleBy("auth", "login");
-Route::GET("/logout")->handleBy("auth", "logout");
-Route::GET("/get_card_info")->handleBy("home", "getCardInfo");
-Route::GET("/logger")->handleBy("logger", "index");
-Route::GET("/logger/add")->handleBy("logger", "addMessage");
+Route::GET("/")->go("/projects/commercial");
+Route::GET("/projects/commercial/")->load("home", "index");
+Route::GET("/projects/my")->load("home", "myProjects");
+Route::GET("/login")->load("auth", "index");
+Route::GET("/try_login")->load("auth", "login");
+Route::GET("/logout")->load("auth", "logout");
+Route::GET("/get_card_info")->load("home", "getCardInfo");
+Route::GET("/logger")->load("logger", "index");
+Route::GET("/logger/add")->load("logger", "addMessage");
 
-Route::POST("/mail/add")->handleBy("home", "addMail");
-Route::POST("/apply_filters")->handleBy("home", "applyFilter");
+Route::POST("/mail/add")->load("home", "addMail");
+Route::POST("/apply_filters")->load("home", "applyFilter");
 
 /*
  * ---------------------------------------------------<< ADMIN >>-------------------------------------------------------
  */
 
-Route::GET("/admin")->if(Route::auth())->handleBy("admin", "index")->else()->redirectTo("/");
-Route::GET('/admin/projects')->if(Route::auth())->handleBy("admin", "projects")->else()->redirectTo("/");
-Route::GET('/admin/mails')->if(Route::auth())->handleBy("admin", "mails")->else()->redirectTo("/");
-Route::DELETE('/admin/mails/delete')->if(Route::auth())->handleBy("admin", "deleteMail")->else()->redirectTo("/");
-Route::GET('/admin/tags')->if(Route::auth())->handleBy("admin", "tags")->else()->redirectTo("/");
+Route::GET("/admin")->if(Route::auth())->load("admin", "index")->else()->go("/");
+Route::GET('/admin/projects')->if(Route::auth())->load("admin", "projects")->else()->go("/");
+Route::GET('/admin/mails')->if(Route::auth())->load("admin", "mails")->else()->go("/");
+Route::DELETE('/admin/mails/delete')->if(Route::auth())->load("admin", "deleteMail")->else()->go("/");
+Route::GET('/admin/tags')->if(Route::auth())->load("admin", "tags")->else()->go("/");
 
-Route::POST('/admin/projects/add')->if(Route::auth())->handleBy("admin", "addProject")->else()->redirectTo("/");
-Route::POST('/admin/projects/update')->if(Route::auth())->handleBy("admin", "updateProject")->else()->redirectTo("/");
-Route::DELETE('/admin/projects/delete')->if(Route::auth())->handleBy("admin", "deleteProject")->else()->redirectTo("/");
-Route::POST('/admin/projects/edit')->if(Route::auth())->handleBy("admin", "editProject")->else()->redirectTo("/");
+Route::POST('/admin/projects/add')->if(Route::auth())->load("admin", "addProject")->else()->go("/");
+Route::POST('/admin/projects/update')->if(Route::auth())->load("admin", "updateProject")->else()->go("/");
+Route::DELETE('/admin/projects/delete')->if(Route::auth())->load("admin", "deleteProject")->else()->go("/");
+Route::POST('/admin/projects/edit')->if(Route::auth())->load("admin", "editProject")->else()->go("/");
