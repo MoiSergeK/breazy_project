@@ -2,7 +2,7 @@
 
 namespace App\Core\Common\DB;
 
-use App\Core\Common\ConfigManager;
+use App\Core\Common\Config\DBConfig;
 
 class DBConnector
 {
@@ -17,11 +17,8 @@ class DBConnector
     }
 
     public function setDefaultConnection(){
-        $configManager = new ConfigManager();
-        foreach($configManager->db()['default'] as $key => $value){
-            $this->use($key, $value);
-            return;
-        }
+        $conn = DBConfig::getDefault();
+        $this->use($conn->dbms, $conn->database);
     }
 
     public function use($dbms, $db){

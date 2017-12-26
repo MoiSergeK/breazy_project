@@ -1,13 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igor-togo
- * Date: 09.09.2017
- * Time: 1:37
- */
 
-namespace App\Core\Common;
+namespace App\Core\Common\Sys;
 
+
+use App\Core\Common\Config\FileConfig;
 
 class Path
 {
@@ -26,25 +22,11 @@ class Path
     }
 
     public static function getFilePath($file_name, $type = null){
-        $dirs = (new ConfigManager())->files()['dirs'];
-        $files_path = $dirs['root'];
-        if($type != null){
-            if($type === 'img'){
-                $files_path .= '/' . $dirs['img'] . '/' . $file_name;
-            }
-        }
-        return $files_path;
+        return FileConfig::getPath($type) . '/' . $file_name;
     }
 
-    public static function getFilesPath($file_type) : string {
-        $dirs = (new ConfigManager())->files()['dirs'];
-        $files_path = $dirs['root'];
-
-        if($file_type === File::IMG){
-            $files_path .= '/' . $dirs['img'];
-        }
-
-        return self::$PROJECT_PATH . "/$files_path";
+    public static function getFilesPath($fileType) : string {
+        return self::$PROJECT_PATH . FileConfig::getPath($fileType);
     }
 
     public static function getControllerPath($controller_name){

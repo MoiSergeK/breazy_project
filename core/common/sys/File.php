@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Common;
+namespace App\Core\Common\Sys;
 
 class File
 {

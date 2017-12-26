@@ -4,6 +4,7 @@ namespace App\Http\Repositories;
 
 use App\Core\Common\DB\DB;
 use App\Core\Common\File;
+use App\Core\Common\Log;
 use App\Http\Models\Project;
 
 class ProjectRepository

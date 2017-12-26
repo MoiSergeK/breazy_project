@@ -69,7 +69,8 @@ function applyFilterEvent(){
 
 function cardClickEvent() {
     $('.card').on('click', function(){
-        $.post('/get_card_info', {id: $(this).attr('id')}, function(response){
+        let id = $(this).attr('id');
+        $.get('/get_card_info', {id: id}, function(response){
             cardInfoModal.setParams(response);
             cardInfoModal.open();
         });

@@ -47,7 +47,7 @@ class HomeController extends Controller
     }
 
     public function getCardInfo(){
-        $id = $_POST['id'];
+        $id = $_GET['id'];
         $project = $this->_unitOfWork->projects->find($id);
         $project->logo = Path::getFilePath($project->logo, 'img');
         $project_tags_ids = $this->_unitOfWork->project_tag->getTagsIds($id);

@@ -1,13 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igor-togo
- * Date: 22.12.2017
- * Time: 19:48
- */
 
-namespace App\Core\Common;
+namespace App\Core\Common\Routing;
 
+
+use App\Core\Common\Auth\JWT;
 
 class Route
 {
@@ -53,7 +49,7 @@ class Route
     */
 
     public static function auth(){
-        return true;
+        return JWT::validate();
     }
 
     public static function getRoute($url, $method){

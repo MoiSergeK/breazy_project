@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Core\Common;
-
+namespace App\Core\Common\Auth;
 
 use App\Core\Common\DB\DB;
+use App\Core\Common\Routing\Request;
 use App\Http\Models\User;
 
 class Auth

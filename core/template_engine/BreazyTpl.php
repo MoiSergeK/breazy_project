@@ -2,8 +2,8 @@
 
 namespace App\Core\Template_Engine;
 
-use App\Core\Common\File;
-use App\Core\Common\Path;
+use App\Core\Common\Sys\File;
+use App\Core\Common\Sys\Path;
 
 class BreazyTpl
 {

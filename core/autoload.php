@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Common\Path;
+use App\Core\Common\Sys\Path;
 
 function init_autoload($__DIR__){
     spl_autoload_register(function ($class_name) use($__DIR__) {

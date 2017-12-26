@@ -2,7 +2,7 @@
 
 namespace App\Config;
 
-use App\Core\Common\Route;
+use App\Core\Common\Routing\Route;
 
 /*
  * --------------------------------------------------<< COMMON >>-------------------------------------------------------

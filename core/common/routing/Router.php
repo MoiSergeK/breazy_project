@@ -1,6 +1,9 @@
 <?php
 
-namespace App\Core\Common;
+namespace App\Core\Common\Routing;
+
+use App\Core\Common\Routing\RouteModel;
+use App\Core\Common\Sys\Path;
 
 require_once "config/routes.php";
 

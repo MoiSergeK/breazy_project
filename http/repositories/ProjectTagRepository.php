@@ -10,6 +10,7 @@ namespace App\Http\Repositories;
 
 
 use App\Core\Common\DB\DB;
+use App\Core\Common\Log;
 use App\Http\Models\Project;
 use App\Http\Models\ProjectTag;
 use App\Http\Models\Tag;

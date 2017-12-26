@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igor-togo
- * Date: 27.08.2017
- * Time: 15:31
- */
 
 namespace App\Core\Common\DB;
 

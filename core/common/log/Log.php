@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Core\Common;
+namespace App\Core\Common\Log;
+
+use App\Core\Common\Config\ConfigManager;
 
 class Log
 {

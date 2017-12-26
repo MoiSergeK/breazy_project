@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Core\Common\Request;
+use App\Core\Common\Routing\Request;
 use App\Core\Template_Engine\BreazyTpl;
 use App\Http\Repositories\UnitOfWork;
 

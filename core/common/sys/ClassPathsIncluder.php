@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igor-togo
- * Date: 23.07.2017
- * Time: 3:35
- */
 
-namespace App\Core\Common;
+namespace App\Core\Common\Sys;
 
 
 trait ClassPathsIncluder
