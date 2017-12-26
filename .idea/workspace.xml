@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7fd4a6f-b652-482f-a7be-b96833d70749" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/common/auth/JWT.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/common/config/DBConfig.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/common/config/FileConfig.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/common/config/LogConfig.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/common/db/DBConnection.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/common/ConfigManager.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Auth.php" afterPath="$PROJECT_DIR$/core/common/auth/Auth.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/ClassPathsIncluder.php" afterPath="$PROJECT_DIR$/core/common/sys/ClassPathsIncluder.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Curl.php" afterPath="$PROJECT_DIR$/core/common/wrappers/Curl.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/File.php" afterPath="$PROJECT_DIR$/core/common/sys/File.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Log.php" afterPath="$PROJECT_DIR$/core/common/log/Log.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Path.php" afterPath="$PROJECT_DIR$/core/common/sys/Path.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Request.php" afterPath="$PROJECT_DIR$/core/common/routing/Request.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Route.php" afterPath="$PROJECT_DIR$/core/common/routing/Route.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/RouteModel.php" afterPath="$PROJECT_DIR$/core/common/routing/RouteModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/common/Router.php" afterPath="$PROJECT_DIR$/core/common/routing/Router.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/autoload.php" afterPath="$PROJECT_DIR$/core/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/BreazyApp.php" afterPath="$PROJECT_DIR$/core/common/BreazyApp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/db/DBConnectionBuilder.php" afterPath="$PROJECT_DIR$/core/common/db/DBConnectionBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/db/DBConnector.php" afterPath="$PROJECT_DIR$/core/common/db/DBConnector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/db/Model.php" afterPath="$PROJECT_DIR$/core/common/db/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/template_engine/BreazyTpl.php" afterPath="$PROJECT_DIR$/core/template_engine/BreazyTpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/controllers/Controller.php" afterPath="$PROJECT_DIR$/http/controllers/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/controllers/HomeController.php" afterPath="$PROJECT_DIR$/http/controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/repositories/ProjectRepository.php" afterPath="$PROJECT_DIR$/http/repositories/ProjectRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/repositories/ProjectTagRepository.php" afterPath="$PROJECT_DIR$/http/repositories/ProjectTagRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/app.js" afterPath="$PROJECT_DIR$/public/assets/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/log/Log.php" afterPath="$PROJECT_DIR$/core/common/log/Log.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Log.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/common/log/Log.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="33" column="120" lean-forward="true" selection-start-line="33" selection-start-column="120" selection-end-line="33" selection-end-column="120" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,7 +118,6 @@
         <option value="$PROJECT_DIR$/core/common/routing/Request.php" />
         <option value="$PROJECT_DIR$/core/common/auth/Auth.php" />
         <option value="$PROJECT_DIR$/core/common/db/Model.php" />
-        <option value="$PROJECT_DIR$/core/common/log/Log.php" />
         <option value="$PROJECT_DIR$/core/common/sys/ClassPathsIncluder.php" />
         <option value="$PROJECT_DIR$/core/common/sys/File.php" />
         <option value="$PROJECT_DIR$/core/autoload.php" />
@@ -146,6 +138,7 @@
         <option value="$PROJECT_DIR$/core/common/BreazyApp.php" />
         <option value="$PROJECT_DIR$/http/controllers/Controller.php" />
         <option value="$PROJECT_DIR$/core/template_engine/BreazyTpl.php" />
+        <option value="$PROJECT_DIR$/core/common/log/Log.php" />
       </list>
     </option>
   </component>
@@ -192,6 +185,11 @@
             <path>
               <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
               <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breazy" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="breazy" type="b2602c69:ProjectViewProjectNode" />
@@ -399,17 +397,17 @@
       <workItem from="1514108446495" duration="28045000" />
       <workItem from="1514218856376" duration="2743000" />
       <workItem from="1514307301320" duration="2707000" />
-      <workItem from="1514318122046" duration="4022000" />
+      <workItem from="1514318122046" duration="4383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288100000" />
+    <option name="totallyTimeSpent" value="288461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22300771" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22300771" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -417,7 +415,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26081082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26081082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -625,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/common/log/Log.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/common/sys/ClassPathsIncluder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -731,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="33" column="120" lean-forward="true" selection-start-line="33" selection-start-column="120" selection-end-line="33" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/common/auth/JWT.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -776,7 +758,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
           <folding>
-            <element signature="e#35#70#0#PHP" expanded="true" />
+            <element signature="e#35#70#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,7 +792,7 @@
         <state relative-caret-position="-249">
           <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="e#43#82#0#PHP" expanded="true" />
+            <element signature="e#43#82#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -827,6 +809,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="61" lean-forward="false" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="33" column="120" lean-forward="true" selection-start-line="33" selection-start-column="120" selection-end-line="33" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/common/log/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
           <folding />
         </state>
       </provider>

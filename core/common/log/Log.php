@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Core\Common\Log;
-
-use App\Core\Common\Config\ConfigManager;
+use App\Core\Common\Config\LogConfig;
 
 class Log
 {
@@ -11,7 +10,7 @@ class Log
     }
 
     public static function pushToLocalFile($msgs){
-        $path = (new ConfigManager())->log()['local'];
+        $path = LogConfig::getLocalLog();
         $date = date('Y/m/d H:m:s');
         $f = fopen($path, 'a');
         foreach($msgs as $msg) {
@@ -21,7 +20,7 @@ class Log
     }
 
     public static function pushToDb($msg){
-        $path = (new ConfigManager())->log['local'];
+        $path = LogConfig::getDBLog();
     }
 
     public static function pushToJSConsole(){

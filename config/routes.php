@@ -8,8 +8,9 @@ use App\Core\Common\Routing\Route;
  * --------------------------------------------------<< COMMON >>-------------------------------------------------------
  */
 
-Route::GET("/")->redirectTo("/projects/commercial");
 Route::GET("/404")->handleBy("home", "_404");
+
+Route::GET("/")->redirectTo("/projects/commercial");
 Route::GET("/projects/commercial")->handleBy("home", "index");
 Route::GET("/projects/my")->handleBy("home", "myProjects");
 Route::GET("/login")->handleBy("auth", "index");
