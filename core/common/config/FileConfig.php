@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igor-togo
- * Date: 25.12.2017
- * Time: 20:18
- */
 
 namespace App\Core\Common\Config;
 
@@ -16,6 +10,7 @@ class FileConfig
     private static $_audioPath;
     private static $_videoPath;
     private static $_docPath;
+    private static $_localDBPath;
 
     public static function setRootPath($path){
         self::$_rootPath = $path;
@@ -62,5 +57,13 @@ class FileConfig
     }
     public static function getDocPath(){
         return self::$_rootPath . '/' . self::$_docPath;
+    }
+
+    public static function setLocalDBPath($path) {
+        self::$_localDBPath = $path;
+    }
+
+    public static function getLocalDBPath() {
+        return self::$_localDBPath;
     }
 }

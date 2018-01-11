@@ -11,6 +11,7 @@ class Project extends Model
     public $description;
     public $logo;
     public $type;
+    public $tags;
 
     public function __construct()
     {

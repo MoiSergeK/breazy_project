@@ -3,7 +3,8 @@
 namespace App\Core\Common\Routing;
 
 
-use App\Core\Common\Auth\JWT;
+use App\Core\Common\Auth\Auth;
+use App\Core\Common\Auth\JWTAuth;
 
 class Route
 {
@@ -49,7 +50,7 @@ class Route
     */
 
     public static function auth(){
-        return JWT::validate();
+        return Auth::checkAccess();
     }
 
     public static function getRoute($url, $method){

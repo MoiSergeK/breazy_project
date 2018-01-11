@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Core\Common\Auth;
-use App\Core\Common\File;
+use App\Core\Common\Sys\File;
 
 class AdminController extends Controller
 {
@@ -44,16 +43,42 @@ class AdminController extends Controller
         $id = $_GET['id'];
         $project = $this->_unitOfWork->projects->find($id);
         $tags = $this->_unitOfWork->tags->getAll();
+        $projectTagsIds = $this->_unitOfWork->project_tag->getTagsIds($id);
+        if(count($projectTagsIds) > 0){
+            $projectTags = $this->_unitOfWork->tags->getByIds($projectTagsIds);
+            $projectTagsNames = [];
+            foreach($projectTags as $tag)
+                $projectTagsNames[] = $tag->name;
+            $project->tags = $projectTagsNames;
+        } else {
+            $project->tags = [];
+        }
+
         return $this->view('/admin/edit_project',
-            ['title' => 'Edit object', 'project' => $project, 'tags' => $tags]);
+            ['title' => 'All projects', 'project' => $project, 'tags' => $tags]);
     }
 
-    public function saveProject(){
-        self::redirect('/admin_projects');
+    public function updateProject(){
+        $this->_unitOfWork->projects->update();
+        $this->_unitOfWork->project_tag->update();
+        self::redirect('/admin/projects');
     }
 
     public function tags(){
-        return 'Tags';
+        $tags = $this->_unitOfWork->tags->getAll();
+        return $this->view('admin/tags', ['title' => 'Tags', 'tags' => $tags]);
+    }
+
+    public function addTag(){
+        $tag = $_POST['tag'];
+        $this->_unitOfWork->tags->create($tag);
+        self::redirect('/admin/tags');
+    }
+
+    public function deleteTag(){
+        $id = $_GET['id'];
+        $this->_unitOfWork->tags->delete($id);
+        self::redirect('/admin/tags');
     }
 
     public function mails(){

@@ -1,7 +1,8 @@
 <?php $this->extends_layout('layouts/admin'); ?>
 
 <div class="container">
-    <form method="post" action="/admin/save_project" name="save_project_form" enctype="multipart/form-data">
+    <form method="post" action="/admin/projects/update" name="save_project_form" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?= $this->project->id ?>">
         <input id="addProjectFormTitle" placeholder="Название проекта" name="name" value="<?= $this->project->name ?>">
         <select name="type">
             <option disabled selected>Тип проекта</option>
@@ -13,7 +14,7 @@
         <br><br>
         <? foreach ($this->tags as $tag) : ?>
             <span class="bottom-block">
-                <input type="checkbox" id="CHBox<?= $tag->name ?>" name="tags[]" value="<?= $tag->name ?>"
+                <input type="checkbox" id="CHBox<?= $tag->name ?>" name="tags[]" value="<?= $tag->id ?>"
                     <?=in_array($tag->name, $this->project->tags) ? 'checked' : ''?>/>
                 <label for="CHBox<?= $tag->name ?>"><?= $tag->name ?></label>
             </span>

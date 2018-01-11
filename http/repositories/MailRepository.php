@@ -1,28 +1,40 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igor-togo
- * Date: 24.12.2017
- * Time: 20:30
- */
 
 namespace App\Http\Repositories;
 
 
+use App\Core\Common\Config\DBConfig;
 use App\Core\Common\DB\DB;
+use App\Core\Common\DB\LocalDBManager;
 use App\Http\Models\Mail;
 
 class MailRepository
 {
     public function getAll() : array {
+        if(DBConfig::isUseLocalDB()){
+            return LocalDBManager::getAll(Mail::class);
+        }
         return Mail::sql("select * from mails");
     }
 
-    public function add($name, $email, $message) {
-        DB::sql("insert into mails values(null,'$name', '$email', '$message')");
+    public function create($name, $email, $message) {
+        if(DBConfig::isUseLocalDB()){
+            $data = [
+                'name' => $name,
+                'email' => $email,
+                'message' => $message
+            ];
+            LocalDBManager::insert(Mail::class, $data);
+        } else {
+            DB::sql("insert into mails values(null,'$name', '$email', '$message')");
+        }
     }
 
     public function delete($id) {
-        DB::sql("delete from mails where id = $id");
+        if(DBConfig::isUseLocalDB()){
+            LocalDBManager::delete(Mail::class, $id);
+        } else {
+            DB::sql("delete from mails where id = $id");
+        }
     }
 }

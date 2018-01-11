@@ -10,6 +10,7 @@ class DBConfig
 {
     private static $_connections;
     private static $_defaultConnection;
+    private static $_useLocalDB = false;
 
     public static function addConnections($dbms, $params){
         self::$_connections[] = new DBConnection($dbms, $params);
@@ -39,5 +40,17 @@ class DBConfig
 
     public static function getDefault(){
         return self::$_defaultConnection;
+    }
+
+    public static function useLocalDB() {
+        self::$_useLocalDB = true;
+    }
+
+    public static function useRemoteDB() {
+        self::$_useLocalDB = false;
+    }
+
+    public static function isUseLocalDB() {
+        return self::$_useLocalDB;
     }
 }

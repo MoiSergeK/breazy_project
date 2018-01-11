@@ -3,6 +3,8 @@
 namespace App\Core\Common\DB;
 
 
+use App\Http\Models\Project;
+
 abstract class Model
 {
     public function __set($name, $value)
@@ -17,6 +19,33 @@ abstract class Model
 
     public static function sql($sql){
         return DB::sql($sql)->toModel(get_called_class());
+    }
+
+    public static function wrapArray($data)
+    {
+        $models = [];
+        foreach ($data as $fields){
+            $model = new Project();
+            foreach($fields as $key => $value){
+                $model->$key = $value;
+            }
+            $models[] = $model;
+        }
+        return $models;
+    }
+
+    public static function wrap($data)
+    {
+        $model = new Project();
+        foreach ($data as $key => $value){
+            $model->$key = $value;
+        }
+        return $model;
+    }
+
+    public static function empty(){
+        $class = get_called_class();
+        return $class;
     }
 
     public function __call($name, $arguments)

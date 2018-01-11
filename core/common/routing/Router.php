@@ -40,7 +40,7 @@ final class Router
     private function _getRoute(){
         $url_str = explode('?', $this->CURRENT_URL);
         $url = $url_str[0];
-        if(count($url_str) > 1 && $url[strlen($url) - 1] === '/'){
+        if(count($url_str) > 1 && $url[strlen($url) - 1] == '/'){
             $url = substr($url, 0, strlen($url) - 1);
         }
         return Route::getRoute($url, $this->CURRENT_REQUEST_METHOD);

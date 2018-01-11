@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Core\Common\Auth;
+use App\Core\Common\Auth\Auth;
 
 class AuthController extends Controller
 {
@@ -27,6 +27,5 @@ class AuthController extends Controller
 
     private function authUser($login){
         Auth::login($login);
-        self::redirect("/admin");
     }
 }

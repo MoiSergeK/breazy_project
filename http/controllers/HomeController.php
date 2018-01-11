@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Core\Common\DB\DB;
-use App\Core\Common\Log;
-use App\Core\Common\Path;
+use App\Core\Common\Sys\Path;
 
 class HomeController extends Controller
 {
     public function index(){
         $records = $this->_unitOfWork->projects->getCommercialProjects();
         $tags = $this->_unitOfWork->tags->getAll();
+
         return $this->view("index",
             [
                 'title' => 'Home',
@@ -60,7 +60,7 @@ class HomeController extends Controller
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
-        $this->_unitOfWork->mails->add($name, $email, $message);
+        $this->_unitOfWork->mails->create($name, $email, $message);
         self::redirect('/');
     }
 
