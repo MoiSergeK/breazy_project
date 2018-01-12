@@ -46,8 +46,12 @@ class DB
 
     public static function extractField($models, $field){
         $array = [];
-        foreach($models as $model){
-            array_push($array, $model->$field);
+        if(is_array($models)){
+            foreach($models as $model){
+                $array[] = $model->$field;
+            }
+        } else {
+            $array[] = $models->$field;
         }
         return $array;
     }

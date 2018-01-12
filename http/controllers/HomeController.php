@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Core\Common\DB\DB;
+use App\Core\Common\DB\LocalDBManager;
 use App\Core\Common\Sys\Path;
 
 class HomeController extends Controller
@@ -37,8 +38,9 @@ class HomeController extends Controller
             return json_encode($this->_unitOfWork->projects->getCommercialProjects());
         }
         $filters = explode(',', $_POST['filters']);
-        $tags_ids = $ids = DB::extractField($this->_unitOfWork->tags->getIds($filters), 'id');
+        $tags_ids = DB::extractField($this->_unitOfWork->tags->getIds($filters), 'id');
         $projects_ids = DB::extractField($this->_unitOfWork->project_tag->getProjectsIds($tags_ids), 'project_id');
+
         if($projects_ids != []){
             $projects = $this->_unitOfWork->projects->getByIds($projects_ids);
             return json_encode($projects);

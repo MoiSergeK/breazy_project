@@ -24,8 +24,9 @@ abstract class Model
     public static function wrapArray($data)
     {
         $models = [];
+        $modelName = get_called_class();
         foreach ($data as $fields){
-            $model = new Project();
+            $model = new $modelName();
             foreach($fields as $key => $value){
                 $model->$key = $value;
             }
@@ -36,7 +37,8 @@ abstract class Model
 
     public static function wrap($data)
     {
-        $model = new Project();
+        $modelName = get_called_class();
+        $model = new $modelName();
         foreach ($data as $key => $value){
             $model->$key = $value;
         }
@@ -45,7 +47,7 @@ abstract class Model
 
     public static function makeEmpty(){
         $class = get_called_class();
-        return $class;
+        return new $class();
     }
 
     public function __call($name, $arguments)

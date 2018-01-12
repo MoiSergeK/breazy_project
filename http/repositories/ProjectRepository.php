@@ -76,7 +76,7 @@ class ProjectRepository
     public function getByIds($projects_ids)
     {
         if(DBConfig::isUseLocalDB()){
-            LocalDBManager::getWhere(Project::class, ['id', 'in', $projects_ids]);
+            return LocalDBManager::getWhere(Project::class, ['id', 'in', $projects_ids]);
         }
         $ids = implode(',', $projects_ids);
         return Project::sql("select * from projects where id in ($ids)");
