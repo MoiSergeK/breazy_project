@@ -3,67 +3,72 @@
 namespace App\Core\Common\DB;
 
 use App\Core\Common\Config\FileConfig;
-use App\Http\Models\Project;
-use App\Http\Models\Tag;
 
 class LocalDBManager
 {
-    public static function getAll($modelName) {
-        $modelName = self::_makeModelName($modelName);
-        FileConfig::getLocalDBPath();
+    public static function getAll($MODEL) {
+        $modelName = self::_makeModelName($MODEL);
         $data = self::_readFile($modelName);
-
-        return Tag::wrapArray($data);
+        return $MODEL::wrapArray($data);
     }
 
-    public static function getWhere($modelName, $condition) {
-        $modelName = self::_makeModelName($modelName);
-        FileConfig::getLocalDBPath();
-        $key = $condition[0];
-        $operation = $condition[1];
-        $value = $condition[2];
+    public static function andWhere($MODEL, $condition) {
+        $modelName = self::_makeModelName($MODEL);
+        $key1 = $condition[0][0];
+        $func1 = self::_switchOperation($condition[0][1]);
+        $value1 = $condition[0][2];
+        $key2 = $condition[1][0];
+        $func2 = self::_switchOperation($condition[1][1]);
+        $value2 = $condition[1][2];
         $data = self::_readFile($modelName);
         $selectedData = [];
 
         foreach($data as $model){
-            if($operation == '='){
-                if($model[$key] == $value){
-                    $selectedData[] = $model;
-                }
-            } elseif ($operation == 'in') {
-                if(in_array($model[$key], $value)){
-                    $selectedData[] = $model;
-                }
+            if(self::$func1($data[$key1], $data[$value1]) and self::$func2($data[$key2], $data[$value2])){
+                $selectedData[] = $model;
+            }
+        }
+        return $MODEL::wrapArray($selectedData);
+    }
+
+    public static function getWhere($MODEL, $condition) {
+        $modelName = self::_makeModelName($MODEL);
+        $key = $condition[0];
+        $operation = self::_switchOperation($condition[1]);
+        $value = $condition[2];
+        $data = self::_readFile($modelName);
+        $selectedData = [];
+
+        foreach($data as $rec){
+            if(self::$operation($rec[$key], $value)){
+                $selectedData[] = $rec;
             }
         }
 
-        return Project::wrapArray($selectedData);
+        return $MODEL::wrapArray($selectedData);
     }
 
-    public static function insert($modelName, $model) {
-        $modelName = self::_makeModelName($modelName);
-        FileConfig::getLocalDBPath();
+    public static function insert($MODEL, $model) {
+        $modelName = self::_makeModelName($MODEL);
         $data = self::_readFile($modelName);
         $model['id'] = self::_getMaxId($data) + 1;
         $data[] = $model;
         self::_writeFile($modelName, $data);
     }
 
-    public static function find($modelName, $id) {
-        $modelName = self::_makeModelName($modelName);
-        FileConfig::getLocalDBPath();
+    public static function find($MODEL, $id) {
+        $modelName = self::_makeModelName($MODEL);
         $data = self::_readFile($modelName);
         foreach($data as $rec){
             if($rec['id'] == $id){
-                return Project::wrap($rec);
+                return $MODEL::wrap($rec);
             }
         }
-        return Project::empty();
+        return $MODEL::makeEmpty();
     }
 
-    public static function delete($modelName, $id){
-        $modelName = self::_makeModelName($modelName);
-        FileConfig::getLocalDBPath();
+    public static function delete($MODEL, $id){
+        $modelName = self::_makeModelName($MODEL);
         $data = self::_readFile($modelName);
         foreach($data as $i => $rec){
             if($rec['id'] == $id){
@@ -74,7 +79,44 @@ class LocalDBManager
         self::_writeFile($modelName, $data);
     }
 
+    public static function update($MODEL, $searchKey, $data) {
+        $modelName = self::_makeModelName($MODEL);
+        $recs = self::_readFile($modelName);
+        foreach($recs as $rec){
+            if(self::_eq($rec[$searchKey], $data[$searchKey])){
+                foreach ($data as $key => $value) {
+                    $rec[$key] = $value;
+                }
+                break;
+            }
+        }
+        self::_writeFile($modelName, $recs);
+    }
+
+    public static function last($MODEL) {
+        $modelName = self::_makeModelName($MODEL);
+        $recs = self::_readFile($modelName);
+        return $recs[self::_getMaxId($recs)];
+    }
+
     // -----------------------------------------------------------------------------------------------------------
+
+    private static function _switchOperation($oper) {
+        switch($oper){
+            case '=':
+                return '_eq';
+            case 'in':
+                return '_in';
+        }
+    }
+
+    private static function _eq($v1, $v2) {
+        return $v1 == $v2;
+    }
+
+    private static function _in($arr, $elem) {
+        return in_array($arr, $elem);
+    }
 
     private static function _getMaxId(&$data) {
         $id = 0;

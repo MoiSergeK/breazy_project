@@ -43,7 +43,7 @@ abstract class Model
         return $model;
     }
 
-    public static function empty(){
+    public static function makeEmpty(){
         $class = get_called_class();
         return $class;
     }

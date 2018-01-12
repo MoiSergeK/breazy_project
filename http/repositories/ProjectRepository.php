@@ -12,7 +12,7 @@ class ProjectRepository
 {
     public function getAll() : array {
         if(DBConfig::isUseLocalDB()){
-            LocalDBManager::getAll(Project::class);
+            return LocalDBManager::getAll(Project::class);
         }
         return Project::sql("select * from projects");
     }
@@ -39,6 +39,9 @@ class ProjectRepository
     }
 
     public function last(){
+        if(DBConfig::isUseLocalDB()){
+            return LocalDBManager::last(Project::class);
+        }
         return Project::sql("select * from projects order by id desc limit 1;")[0];
     }
 
@@ -53,7 +56,7 @@ class ProjectRepository
         if(DBConfig::isUseLocalDB()){
             $data = $_POST;
             $data['logo'] = $logo;
-            return LocalDBManager::find(Project::class, $data);
+            LocalDBManager::insert(Project::class, $data);
         } else {
             $name = $_POST['name'];
             $description = $_POST['description'];
@@ -65,8 +68,9 @@ class ProjectRepository
     public function delete($id){
         if(DBConfig::isUseLocalDB()){
             LocalDBManager::delete(Project::class, $id);
+        } else {
+            DB::sql("delete from projects where id=$id");
         }
-        DB::sql("delete from projects where id=$id");
     }
 
     public function getByIds($projects_ids)
@@ -80,7 +84,7 @@ class ProjectRepository
 
     public function update() {
         if(DBConfig::isUseLocalDB()){
-            LocalDBManager::update(Project::class, $_POST);
+            LocalDBManager::update(Project::class,'id', $_POST);
         } else {
             $id = $_POST['id'];
             $name = $_POST['name'];

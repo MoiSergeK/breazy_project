@@ -36,7 +36,7 @@ class AdminController extends Controller
         if($logo !== 'nologo.png'){
             File::delete($logo, File::IMG);
         }
-        self::redirect('/admin_projects');
+        self::redirect('/admin/projects');
     }
 
     public function editProject(){

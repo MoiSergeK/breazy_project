@@ -17,15 +17,24 @@ class ProjectTagRepository
     }
 
     public function create($project_id, $tags){
+
         if(count($tags) > 0) {
             foreach ($tags as $tag){
-                DB::sql("insert into project_tag values($project_id, $tag->id)");
+                if(DBConfig::isUseLocalDB()){
+                    LocalDBManager::insert(ProjectTag::class, ['project_id' => $project_id, 'tag_ig' => $tag->id]);
+                } else {
+                    DB::sql("insert into project_tag values($project_id, $tag->id)");
+                }
             }
         }
     }
 
     public function delete($id){
-        DB::sql("delete from project_tag where project_id=$id");
+        if(DBConfig::isUseLocalDB()){
+            LocalDBManager::delete(ProjectTag::class, $id);
+        } else {
+            DB::sql("delete from project_tag where project_id=$id");
+        }
     }
 
     public function getTagsIds($project_id){

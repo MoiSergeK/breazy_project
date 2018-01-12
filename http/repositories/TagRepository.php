@@ -19,7 +19,7 @@ class TagRepository
 
     public function create($tag) {
         if(DBConfig::isUseLocalDB()){
-            Tag::insert(['name' => $tag]);
+            LocalDBManager::insert(Tag::class, ['name' => $tag]);
             return;
         }
         if(!$this->tagExists($tag))

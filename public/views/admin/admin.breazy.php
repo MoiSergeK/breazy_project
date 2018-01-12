@@ -1,7 +1,7 @@
 <?php $this->extends_layout('layouts/admin'); ?>
 
 <div class="container">
-    <form method="post" action="/admin/add_project" name="add_project_form" enctype="multipart/form-data">
+    <form method="post" action="/admin/projects/add" name="add_project_form" enctype="multipart/form-data">
         <input id="addProjectFormTitle" placeholder="Project name" name="name">
         <select name="type">
             <option disabled selected>Project type</option>
