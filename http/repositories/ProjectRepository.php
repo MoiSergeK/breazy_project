@@ -83,8 +83,18 @@ class ProjectRepository
     }
 
     public function update() {
+        if($_FILES['file']['size'] > 0){
+            $logo = File::upload($_FILES['file']['tmp_name'], $_FILES['file']['name'], File::IMG);
+        }
+        else{
+            $logo = 'nologo.png';
+        }
+
         if(DBConfig::isUseLocalDB()){
-            LocalDBManager::update(Project::class,'id', $_POST);
+            $data = $_POST;
+            $data['logo'] = $logo;
+
+            LocalDBManager::update(Project::class,'id', $data);
         } else {
             $id = $_POST['id'];
             $name = $_POST['name'];
