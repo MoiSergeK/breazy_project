@@ -7,7 +7,7 @@
     <?php foreach($this->projects as $project) : ?>
         <div class="row">
             <div class="col s4">
-                <?= $this->img($project->logo) ?>
+                <img src="/public/files/img/<?= $project->logo; ?>" style="width: 100%;">
             </div>
             <div class="col s8">
                 <h4><?= $project->name; ?></h4>

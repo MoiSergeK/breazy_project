@@ -37,14 +37,16 @@ class HomeController extends Controller
         if($_POST['filters'] === ''){
             return json_encode($this->_unitOfWork->projects->getCommercialProjects());
         }
+
         $filters = explode(',', $_POST['filters']);
         $tags_ids = DB::extractField($this->_unitOfWork->tags->getIds($filters), 'id');
-        $projects_ids = DB::extractField($this->_unitOfWork->project_tag->getProjectsIds($tags_ids), 'project_id');
+        $projects_ids = DB::extractField($this->_unitOfWork->project_tag->getProjectsIds($filters), 'project_id');
 
-        if($projects_ids != []){
+        if(count($projects_ids) > 0){
             $projects = $this->_unitOfWork->projects->getByIds($projects_ids);
             return json_encode($projects);
         }
+
         return '[]';
     }
 
@@ -52,10 +54,32 @@ class HomeController extends Controller
         $id = $_GET['id'];
         $project = $this->_unitOfWork->projects->find($id);
         $project->logo = Path::getFilePath($project->logo, 'img');
-        $project_tags_ids = $this->_unitOfWork->project_tag->getTagsIds($id);
-        $project_tags = $this->_unitOfWork->tags->getByIds($project_tags_ids);
-        $project->tags = $project_tags;
+        $projectTagsIds = $this->_unitOfWork->project_tag->getTagsIds($id);
+
+        if(count($projectTagsIds) > 0){
+            $projectTags = $this->_unitOfWork->tags->getByIds($project->tags);
+            $projectTagsNames = [];
+
+            foreach($projectTags as $tag)
+                $projectTagsNames[] = $tag->name;
+
+            $project->tags = $projectTagsNames;
+        } else {
+            $project->tags = [];
+        }
+
         return json_encode($project);
+    }
+
+    public function contacts(){
+        $tags = $this->_unitOfWork->tags->getAll();
+
+        return $this->view("contacts",
+            [
+                'title' => 'Contacts',
+                'header' => "Serge Kovalev CV",
+                'tags' => $tags
+            ]);
     }
 
     public function addMail(){

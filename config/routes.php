@@ -22,6 +22,7 @@ Route::GET ("/logger/add")               ->load("logger", "addMessage");
 Route::POST("/try_login")                ->load("auth", "login");
 Route::POST("/mail/add")                 ->load("home", "addMail");
 Route::POST("/apply_filters")            ->load("home", "applyFilter");
+Route::GET ("/contacts")                 ->load("home", "contacts");
 
 /*
  * ---------------------------------------------------<< ADMIN >>-------------------------------------------------------

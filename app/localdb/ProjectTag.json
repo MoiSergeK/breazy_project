@@ -1,6 +1,491 @@
-[
-  {
+{
+  "0": {
     "project_id": 1,
     "tag_id": 1
+  },
+  "4": {
+    "project_id": "1",
+    "tag_ig": "16",
+    "id": 4
+  },
+  "5": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 5
+  },
+  "6": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 6
+  },
+  "7": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 7
+  },
+  "8": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 8
+  },
+  "9": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 9
+  },
+  "10": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 10
+  },
+  "11": {
+    "project_id": "1",
+    "tag_ig": "14",
+    "id": 11
+  },
+  "12": {
+    "project_id": "1",
+    "tag_ig": "15",
+    "id": 12
+  },
+  "13": {
+    "project_id": "1",
+    "tag_ig": "16",
+    "id": 13
+  },
+  "14": {
+    "project_id": "1",
+    "tag_ig": "6",
+    "id": 14
+  },
+  "15": {
+    "project_id": "1",
+    "tag_ig": "14",
+    "id": 15
+  },
+  "16": {
+    "project_id": "1",
+    "tag_ig": "15",
+    "id": 16
+  },
+  "17": {
+    "project_id": "1",
+    "tag_ig": "16",
+    "id": 17
+  },
+  "18": {
+    "project_id": null,
+    "tag_ig": 1,
+    "id": 18
+  },
+  "19": {
+    "project_id": null,
+    "tag_ig": 2,
+    "id": 19
+  },
+  "20": {
+    "project_id": null,
+    "tag_ig": 6,
+    "id": 20
+  },
+  "21": {
+    "project_id": null,
+    "tag_ig": 8,
+    "id": 21
+  },
+  "22": {
+    "project_id": null,
+    "tag_ig": 13,
+    "id": 22
+  },
+  "23": {
+    "project_id": null,
+    "tag_ig": 14,
+    "id": 23
+  },
+  "24": {
+    "project_id": null,
+    "tag_ig": 15,
+    "id": 24
+  },
+  "25": {
+    "project_id": null,
+    "tag_ig": 17,
+    "id": 25
+  },
+  "26": {
+    "project_id": null,
+    "tag_ig": 20,
+    "id": 26
+  },
+  "27": {
+    "project_id": null,
+    "tag_ig": 1,
+    "id": 27
+  },
+  "28": {
+    "project_id": null,
+    "tag_ig": 2,
+    "id": 28
+  },
+  "29": {
+    "project_id": null,
+    "tag_ig": 6,
+    "id": 29
+  },
+  "30": {
+    "project_id": null,
+    "tag_ig": 8,
+    "id": 30
+  },
+  "31": {
+    "project_id": null,
+    "tag_ig": 13,
+    "id": 31
+  },
+  "32": {
+    "project_id": null,
+    "tag_ig": 14,
+    "id": 32
+  },
+  "33": {
+    "project_id": null,
+    "tag_ig": 15,
+    "id": 33
+  },
+  "34": {
+    "project_id": null,
+    "tag_ig": 16,
+    "id": 34
+  },
+  "35": {
+    "project_id": null,
+    "tag_ig": 17,
+    "id": 35
+  },
+  "36": {
+    "project_id": null,
+    "tag_ig": 20,
+    "id": 36
+  },
+  "37": {
+    "project_id": "3",
+    "tag_ig": "0",
+    "id": 37
+  },
+  "38": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 38
+  },
+  "39": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 39
+  },
+  "40": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 40
+  },
+  "41": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 41
+  },
+  "42": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 42
+  },
+  "43": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 43
+  },
+  "44": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 44
+  },
+  "45": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 45
+  },
+  "46": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 46
+  },
+  "47": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 47
+  },
+  "48": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 48
+  },
+  "49": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 49
+  },
+  "50": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 50
+  },
+  "51": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 51
+  },
+  "52": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 52
+  },
+  "53": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 53
+  },
+  "54": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 54
+  },
+  "55": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 55
+  },
+  "56": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 56
+  },
+  "57": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 57
+  },
+  "58": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 58
+  },
+  "59": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 59
+  },
+  "60": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 60
+  },
+  "61": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 61
+  },
+  "62": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 62
+  },
+  "63": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 63
+  },
+  "64": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 64
+  },
+  "65": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 65
+  },
+  "66": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 66
+  },
+  "67": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 67
+  },
+  "68": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 68
+  },
+  "69": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 69
+  },
+  "70": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 70
+  },
+  "71": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 71
+  },
+  "72": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 72
+  },
+  "73": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 73
+  },
+  "74": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 74
+  },
+  "75": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 75
+  },
+  "76": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 76
+  },
+  "77": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 77
+  },
+  "78": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 78
+  },
+  "79": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 79
+  },
+  "80": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 80
+  },
+  "81": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 81
+  },
+  "82": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 82
+  },
+  "83": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 83
+  },
+  "84": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 84
+  },
+  "85": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 85
+  },
+  "86": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 86
+  },
+  "87": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 87
+  },
+  "88": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 88
+  },
+  "89": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 89
+  },
+  "90": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 90
+  },
+  "91": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 91
+  },
+  "92": {
+    "project_id": "3",
+    "tag_ig": "1",
+    "id": 92
+  },
+  "93": {
+    "project_id": "3",
+    "tag_ig": "2",
+    "id": 93
+  },
+  "94": {
+    "project_id": "3",
+    "tag_ig": "6",
+    "id": 94
+  },
+  "95": {
+    "project_id": "3",
+    "tag_ig": "8",
+    "id": 95
+  },
+  "96": {
+    "project_id": "3",
+    "tag_ig": "14",
+    "id": 96
+  },
+  "97": {
+    "project_id": "3",
+    "tag_ig": "15",
+    "id": 97
+  },
+  "98": {
+    "project_id": "3",
+    "tag_ig": "16",
+    "id": 98
+  },
+  "99": {
+    "project_id": "3",
+    "tag_ig": "17",
+    "id": 99
+  },
+  "100": {
+    "project_id": "3",
+    "tag_ig": "20",
+    "id": 100
   }
-]
+}

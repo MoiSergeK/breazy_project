@@ -86,9 +86,6 @@ class ProjectRepository
         if($_FILES['file']['size'] > 0){
             $logo = File::upload($_FILES['file']['tmp_name'], $_FILES['file']['name'], File::IMG);
         }
-        else{
-            $logo = 'nologo.png';
-        }
 
         if(DBConfig::isUseLocalDB()){
             $data = $_POST;

@@ -19,7 +19,7 @@ class CardInfoModal extends Modal{
         $('#contentBoxModalImg').attr('src', data['logo']);
         let tags = '';
         for(let tag of data['tags']){
-            tags += "<i class='text-blue'><u>" + tag['name'] + "</u></i> ";
+            tags += "<i class='text-blue'><u>" + tag + "</u></i> ";
         }
         $('#contentBoxModalTags').html(tags);
         $('body').css('overflow', 'hidden');
