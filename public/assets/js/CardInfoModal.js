@@ -15,7 +15,7 @@ class CardInfoModal extends Modal{
     setParams(response){
         let data = JSON.parse(response);
         $('#contentBoxModalTitle').text(data['name']);
-        $('#contentBoxModalDescription').text(data['description']);
+        $('#contentBoxModalDescription').html(data['description']);
         $('#contentBoxModalImg').attr('src', data['logo']);
         let tags = '';
         for(let tag of data['tags']){

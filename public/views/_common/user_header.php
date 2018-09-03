@@ -1,7 +1,7 @@
 <div class="content-box grey-dark-6 text-white shadow-bottom">
     <div class="row">
         <div class="col s6">
-            <h4><?= $this->header ?></h4>
+            <h5><?= $this->header ?></h5>
         </div>
         <div class="col s6 right-align">
             <a href="/projects/commercial"><button class="breazy-btn <?= $this->title === 'Home' ? 'breazy-btn-active' : ''; ?>">

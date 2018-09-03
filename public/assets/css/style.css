@@ -10,11 +10,11 @@ body{
 }
 
 .breazy-btn{
-    padding:15px;
+    padding:10px;
     background-color: transparent;
     color: #fff;
     font-family: monospace;
-    font-size: 18px;
+    font-size: 13px;
     border-radius: 3px;
     border: 5px solid #7e2464;
     outline: none;
@@ -33,7 +33,7 @@ body{
 }
 
 .content-box{
-    padding: 20px;
+    padding: 10px;
 }
 
 .row{
@@ -147,19 +147,19 @@ body{
 
 #contentBoxCloseBtn{
     position: fixed;
-    margin-top:10px;
-    right:50px;
+    top:10px;
+    right:10px;
     box-shadow: 0px 0px 65px 13px rgba(0,0,0,0.75);
 }
 
 .roundedCloseBtn{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border: 10px solid #202020;
     border-radius: 100%;
     background-color: #7e2464;
     padding: 0;
-    font-size: 40px;
+    font-size: 20px;
     transition: 0.1s all linear;
 }
 
@@ -203,4 +203,8 @@ body{
 
 .hr-dark{
     border-color: #404040;
+}
+
+#contentBoxModalImg{
+    border-radius: 5px;
 }

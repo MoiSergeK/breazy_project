@@ -17,13 +17,8 @@
                 Totally found <b class="text-blue" id="projectsCounter"><?= count($this->projects); ?></b> projects
             </div>
             <br>
-            <div class="row">
-                <div class="col l9 m8 s12">
-                    __CONTENT__
-                </div>
-                <div class="col l3 m4 s12 hr-left">
-                    <?= $this->render_partial('_common/right_side_bar.php'); ?>
-                </div>
+            <div>
+                __CONTENT__
             </div>
         </div>
     </main>
